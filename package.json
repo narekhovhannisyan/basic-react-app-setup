@@ -1,16 +1,36 @@
 {
-  "name": "basic-react-app-setup",
-  "version": "0.1.0",
-  "private": false,
+  "name": "coinship-front",
+  "version": "0.0.1",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts-ts": "3.1.0",
+    "webpack-dev-server": "3.2.1"
   },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.4.0",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.12.0",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "css-loader": "2.1.1",
+    "fixpack": "2.3.1",
+    "html-webpack-plugin": "3.2.0",
+    "style-loader": "0.23.1",
+    "ts-loader": "5.3.3",
+    "typescript": "3.3.4000",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0"
+  },
+  "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "fixpack": "fixpack",
+    "start": "webpack && webpack-dev-server --config webpack.config.js",
+    "webpack": "./node_modules/.bin/webpack"
   }
 }
